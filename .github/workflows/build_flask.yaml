@@ -22,5 +22,8 @@ jobs:
       - name: Wait for flask fo boot up
         run: sleep 3
 
+      - name: Log
+        run: docker logs test-app
+
       - name: Test the website
         run: curl http://localhost:5000
