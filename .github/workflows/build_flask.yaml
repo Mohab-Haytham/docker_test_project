@@ -1,0 +1,26 @@
+name: Build and Test Flask App
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Copy Files
+        uses: actions/checkout@v4
+
+      - name: Build the image
+        run: docker build -f docker_images/dockerfile_flask -t my-flask-app
+
+      - name: Run the container on port 5000
+        run: docker run -d -p 5000:5000 --name test-app my-flask-app
+
+      - name: Wait for flask fo boot up
+        run: sleep 3
+
+      - name: Test the website
+        run: curl http:localhost:5000

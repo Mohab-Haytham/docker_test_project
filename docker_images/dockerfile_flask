@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+RUN PIP install flask
+
+COPY scripts/app.py /scripts/app.py
+
+EXPOSE 5000
+
+CMD ["python", "/scipts/app.py"]
