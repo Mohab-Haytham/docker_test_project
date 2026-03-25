@@ -1,0 +1,7 @@
+FROM debian:13
+
+COPY scripts/test.sh /scripts/test.sh
+
+RUN chmod +x /scripts/test.sh
+
+CMD ["/scripts/test.sh"]
