@@ -6,4 +6,4 @@ COPY scripts/app.py /scripts/app.py
 
 EXPOSE 5000
 
-CMD ["python", "/scipts/app.py"]
+CMD ["python", "/scripts/app.py"]
