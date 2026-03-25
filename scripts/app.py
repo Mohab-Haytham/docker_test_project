@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hellow from Alexandria! My Flask App is running in a container."
+    return "Hello from Alexandria! My Flask App is running in a container."
 
 
 if __name__== '__main__':

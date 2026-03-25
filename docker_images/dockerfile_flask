@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 RUN pip install flask
 
-COPY scripts/app.py /scriipts/app.py
+COPY scripts/app.py /scripts/app.py
 
 EXPOSE 5000
 
