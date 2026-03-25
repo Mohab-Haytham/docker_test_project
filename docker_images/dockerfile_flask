@@ -1,8 +1,8 @@
 FROM python:3.11-slim
 
-RUN PIP install flask
+RUN pip install flask
 
-COPY scripts/app.py /scripts/app.py
+COPY scripts/app.py /scriipts/app.py
 
 EXPOSE 5000
 
